@@ -11,4 +11,5 @@ class MemberController {
     def all = Member.all
     [all: all]
   }
+  def create() {}
 }
