@@ -12,4 +12,10 @@ class MemberController {
     [all: all]
   }
   def create() {}
+  def execCreate() {
+    String name = params.name
+    def member = new Member(name: name)
+    member.save()
+    render 'create success!'
+  }
 }
