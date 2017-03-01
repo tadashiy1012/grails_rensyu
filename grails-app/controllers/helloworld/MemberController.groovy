@@ -11,6 +11,10 @@ class MemberController {
     def all = Member.all
     [all: all]
   }
+  def list() {
+    def all = Member.all
+    [all: all]
+  }
   def create() {}
   def execCreate() {
     String name = params.name
