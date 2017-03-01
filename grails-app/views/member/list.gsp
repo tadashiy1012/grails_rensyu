@@ -1,11 +1,15 @@
 <html>
   <head>
-    <title>member hoge</title>
+    <title>member list</title>
   </head>
   <body>
-    <h1>member hoge</h1>
+    <h1>member list</h1>
     <ul><g:each in="${all}" var="item">
-      <li><span>${item}</span></li>
+      <li>
+        <span>${item.id}</span>
+        <span>:</span>
+        <span>${item.name}</span>
+      </li>
     </g:each></ul>
   </body>
 </html>
