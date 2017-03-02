@@ -22,4 +22,11 @@ class MemberController {
     member.save()
     render 'create success!'
   }
+  def delete() {}
+  def execDelete() {
+    def id = params.id
+    def m = Member.get(id)
+    m.delete()
+    render 'delete success!'
+  }
 }
