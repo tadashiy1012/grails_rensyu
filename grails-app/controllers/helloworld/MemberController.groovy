@@ -27,7 +27,7 @@ class MemberController {
     def id = params.id
     def m = Member.get(id)
     if (m != null) {
-      m.delete()
+      m.delete(flush: true)
     }
     render 'delete success!'
   }
