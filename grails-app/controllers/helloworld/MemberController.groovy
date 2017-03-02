@@ -26,8 +26,9 @@ class MemberController {
   def execDelete() {
     def id = params.id
     def m = Member.get(id)
-    print m.id
-    m.delete()
+    if (m != null) {
+      m.delete()
+    }
     render 'delete success!'
   }
 }
