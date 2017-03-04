@@ -46,7 +46,7 @@ class MemberController {
     def m = Member.get(id)
     if (m != null) {
       m.name = params.name
-      m.save()
+      m.save(flush: true)
       render 'update success!'
     } else {
       render 'update failed!'
