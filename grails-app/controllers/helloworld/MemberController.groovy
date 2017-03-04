@@ -37,6 +37,7 @@ class MemberController {
     if (m != null) {
       render status: 404
     } else {
+      println m
       [tgt: m]
     }
   }
