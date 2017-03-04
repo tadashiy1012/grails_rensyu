@@ -32,7 +32,7 @@ class MemberController {
     render 'delete success!'
   }
   def update() {
-    def id = request.id
+    def id = params.id
     println id
     def m = Member.get(id)
     if (m == null) {
