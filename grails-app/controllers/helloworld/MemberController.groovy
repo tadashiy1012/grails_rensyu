@@ -31,4 +31,22 @@ class MemberController {
     }
     render 'delete success!'
   }
+  def update() {
+    def id = request['id']
+    def m = Member.get(id)
+    [tgt: m]
+  }
+  def execUpdate() {
+    def id = params.id
+    def m = Member.get(id)
+    if (m != null) {
+      m.name = params.name
+      m.save()
+      render 'update success!'
+    } else {
+      render 'update failed!'
+    }
+    
+
+  }
 }
