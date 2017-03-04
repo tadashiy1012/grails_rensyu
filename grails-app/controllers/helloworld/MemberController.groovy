@@ -32,12 +32,12 @@ class MemberController {
     render 'delete success!'
   }
   def update() {
-    def id = request['id']
+    def id = request.id
+    println id
     def m = Member.get(id)
-    if (m != null) {
+    if (m == null) {
       render status: 404
     } else {
-      println m
       [tgt: m]
     }
   }
