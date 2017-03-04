@@ -34,7 +34,11 @@ class MemberController {
   def update() {
     def id = request['id']
     def m = Member.get(id)
-    [tgt: m]
+    if (m != null) {
+      render status: 404
+    } else {
+      [tgt: m]
+    }
   }
   def execUpdate() {
     def id = params.id
